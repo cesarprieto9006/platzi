@@ -1,6 +1,5 @@
 package com.example.projectlist.screens.main.viewmodel
 
-
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.projectlist.screens.BaseViewModel
@@ -11,6 +10,7 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
 import timber.log.Timber
 import javax.inject.Inject
+import kotlin.collections.ArrayList
 
 class MainViewModel @Inject constructor(private val repository: MainRepository) :
     BaseViewModel() {
@@ -33,6 +33,7 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ result ->
                 isLoading.value = false
+                repository.saveData(result)
                 _dataData.value=result
             }
             ) { error ->
@@ -41,4 +42,6 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
             }
     }
 
+    fun getFishData(): LiveData<List<DataFish>> =
+        repository.getDataBase()
 }

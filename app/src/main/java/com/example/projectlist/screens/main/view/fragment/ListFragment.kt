@@ -35,8 +35,6 @@ class ListFragment : Fragment() {
 
         binding.viewModel = viewModel
 
-
-
         return binding.root
     }
 
@@ -47,6 +45,11 @@ class ListFragment : Fragment() {
 
         viewModel.isError.value = !Utils().isConnected(requireActivity())
 
+        if (viewModel.isError.value == true) {
+            viewModel.getFishData().observe(viewLifecycleOwner, Observer { list ->
+                fishAdapter.addAll(list)
+            })
+        }
 
         setupListener()
         observerLiveData()
