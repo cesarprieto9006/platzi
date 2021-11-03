@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -16,6 +18,67 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/ic_background">
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/FontRufinaBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="@string/fish_list"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_32"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_error_connection"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_error"
+            android:visibility="@{viewModel.isError()? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_error"
+            style="@style/FontRufinaBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/error_connection"
+            android:textColor="@color/red"
+            android:textSize="@dimen/font_size_20"
+            android:textStyle="bold"
+            android:visibility="@{viewModel.isError()? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_error_connection" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fish"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_error"
+            tools:listitem="@layout/item_data" />
+
+        <include
+            android:id="@+id/ly_loading"
+            layout="@layout/loading"
+            android:visibility="@{viewModel.isLoading()? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
