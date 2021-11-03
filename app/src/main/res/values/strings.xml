@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">PLATZI</string>
+    <string name="scientific_name">Name</string>
+    <string name="specie_name">Specie</string>
+    <string name="texture">Texture</string>
+    <string name="serving_weight">Serving</string>
+    <string name="fish_list">Fish List</string>
+    <string name="more">more-></string>
+    <string name="habitat">Habitat</string>
+    <string name="harvest">Harvest</string>
+    <string name="location">Location</string>
+    <string name="fishing_rate">Fishing Rate</string>
+    <string name="error_connection">Connection Error</string>
+
+</resources>

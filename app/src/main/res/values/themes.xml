@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ProjectList" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="FontRufinaBold">
+        <item name="android:fontFamily">@font/rufina_bold</item>
+    </style>
+
+    <style name="FontRufinaRegular">
+        <item name="android:fontFamily">@font/rufina_regular</item>
+    </style>
+
+    <style name="FontAvenirLight">
+        <item name="android:fontFamily">@font/avenir_light</item>
+    </style>
+
+    <style name="FontAvenirBlack">
+        <item name="android:fontFamily">@font/avenir_black</item>
+    </style>
+</resources>
