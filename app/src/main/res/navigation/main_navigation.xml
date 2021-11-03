@@ -7,6 +7,14 @@
         android:id="@+id/personalListFragment"
         android:name="com.example.projectlist.screens.main.view.fragment.ListFragment"
         android:label="PersonalListFragment"
-        tools:layout="@layout/fragment_list" />
-
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/go_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.projectlist.screens.main.view.fragment.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail"/>
 </navigation>

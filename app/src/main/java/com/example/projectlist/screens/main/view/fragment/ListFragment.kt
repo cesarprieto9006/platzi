@@ -70,5 +70,6 @@ class ListFragment : Fragment() {
 
     private fun moreClicked(dataFish: DataFish) {
         viewModel.dataFish = dataFish
+        findNavController().navigate(R.id.go_to_detailFragment)
     }
 }

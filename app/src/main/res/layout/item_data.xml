@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20">
+
+        <ImageView
+            android:id="@+id/iv_fish"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/ly_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_2"
+            android:paddingBottom="@dimen/dp_2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_fish"
+            tools:layout_editor_absoluteX="20dp">
+
+            <TextView
+                style="@style/FontAvenirBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingEnd="@dimen/dp_10"
+                android:text="@string/scientific_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_15"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/FontAvenirLight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_number_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_2"
+            android:paddingBottom="@dimen/dp_2"
+            app:layout_constraintTop_toBottomOf="@+id/ly_name"
+            tools:layout_editor_absoluteX="10dp">
+
+            <TextView
+                style="@style/FontAvenirBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingEnd="@dimen/dp_10"
+                android:text="@string/specie_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_15"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tv_number_id"
+                style="@style/FontAvenirLight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_2"
+            android:paddingBottom="@dimen/dp_2"
+            app:layout_constraintTop_toBottomOf="@+id/ly_number_id"
+            tools:layout_editor_absoluteX="10dp">
+
+            <TextView
+                style="@style/FontAvenirBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingEnd="@dimen/dp_10"
+                android:text="@string/texture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_15"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/FontAvenirLight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_2"
+            android:paddingBottom="@dimen/dp_2"
+            app:layout_constraintTop_toBottomOf="@+id/ly_address"
+            tools:layout_editor_absoluteX="10dp">
+
+            <TextView
+                style="@style/FontAvenirBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingEnd="@dimen/dp_10"
+                android:text="@string/serving_weight"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_15"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                style="@style/FontAvenirLight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_15" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_more"
+            style="@style/FontAvenirBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingEnd="@dimen/dp_10"
+            android:text="@string/more"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font_size_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ly_phone"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_more" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
